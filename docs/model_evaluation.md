@@ -150,3 +150,23 @@ the same data, configuration, and random seeds.
 
 The next milestone is a defensible, leakage-aware evaluation followed
 by alignment with the assigned CT-radiomics and three-outcome problem.
+
+
+## Reproducibility and leakage caveat
+
+The current preprocessing in `src/data.py` identifies placeholder values
+using outcome-specific feature frequencies calculated before the train/test
+split. This makes preprocessing dependent on labels across the full dataset
+and may bias evaluation. The reported metrics are preliminary and should not
+be treated as unbiased held-out performance until this is corrected and the
+experiments are rerun.
+
+The imputer, winsorizer, scaler, feature selector, sampler, and classifier
+are assembled in a training pipeline. These steps are fitted within each
+cross-validation training fold. However, this does not remove leakage already
+introduced by preprocessing in `src/data.py`.
+
+The dataset files have no patient identifiers, so combining modalities by
+row position cannot independently establish patient-level alignment.
+The current implementation uses laboratory measurements, not CT radiomics,
+and does not implement mechanical ventilation prediction.
