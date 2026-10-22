@@ -1,0 +1,344 @@
+{
+ "icu": {
+  "n": 2000,
+  "positives": 279,
+  "n_train": 1400,
+  "n_test": 600,
+  "test_positives": 84,
+  "best_config": {
+   "selector": "fpr",
+   "sampler": "none",
+   "model": "LightGBM"
+  },
+  "cv_auroc": 0.9085860197893393,
+  "cv_auprc": 0.6727264041233141,
+  "test": {
+   "All": {
+    "auroc": 0.9001476559616095,
+    "auprc": 0.639023712749873
+   },
+   "Biochemical": {
+    "auroc": 0.8812984496124031,
+    "auprc": 0.6255622581710493
+   },
+   "Hematological": {
+    "auroc": 0.5059754521963825,
+    "auprc": 0.14014835979817603
+   },
+   "Immunological": {
+    "auroc": 0.5507105943152456,
+    "auprc": 0.1577411267040731
+   },
+   "Baseline LR": {
+    "auroc": 0.8192137320044297,
+    "auprc": 0.5044173399124298
+   }
+  },
+  "test_ci": {
+   "All": {
+    "auroc": [
+     0.8700317247897406,
+     0.931960721904114
+    ],
+    "auprc": [
+     0.5561059203194346,
+     0.7478243771101766
+    ]
+   },
+   "Biochemical": {
+    "auroc": [
+     0.8440542402601324,
+     0.9175920300600396
+    ],
+    "auprc": [
+     0.5393754141992385,
+     0.7411305338520024
+    ]
+   },
+   "Hematological": {
+    "auroc": [
+     0.44740595734149385,
+     0.5683597875266365
+    ],
+    "auprc": [
+     0.10722724508165475,
+     0.18217818950499604
+    ]
+   },
+   "Immunological": {
+    "auroc": [
+     0.4995980552322113,
+     0.6077206730248916
+    ],
+    "auprc": [
+     0.1323893791576876,
+     0.2009039677673391
+    ]
+   },
+   "Baseline LR": {
+    "auroc": [
+     0.7601257552236362,
+     0.8667541838118791
+    ],
+    "auprc": [
+     0.3911617425605262,
+     0.6224503826794893
+    ]
+   }
+  },
+  "paired_prob_all_better": {
+   "Biochemical": {
+    "auroc": 0.975,
+    "auprc": 0.68
+   },
+   "Hematological": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   },
+   "Immunological": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   },
+   "Baseline LR": {
+    "auroc": 1.0,
+    "auprc": 0.995
+   }
+  },
+  "threshold": 0.0783280899567915,
+  "diagnostics": {
+   "missingness_mask_only_auroc": 0.8716431339977853,
+   "nan_aware_lightgbm_auroc": 0.9546188630490956
+  },
+  "sensitivity": 0.7857142857142857,
+  "specificity": 0.8313953488372093,
+  "precision": 0.43137254901960786,
+  "tp": 66,
+  "fp": 87,
+  "fn": 18,
+  "tn": 429,
+  "top_features": [
+   {
+    "feature": "ALT",
+    "group": "biochemical",
+    "importance": 0.1503076165866864
+   },
+   {
+    "feature": "Calcium",
+    "group": "biochemical",
+    "importance": 0.050209179278946775
+   },
+   {
+    "feature": "Age",
+    "group": "demographics",
+    "importance": 0.03339639473360408
+   },
+   {
+    "feature": "AST",
+    "group": "biochemical",
+    "importance": 0.014564107296665492
+   },
+   {
+    "feature": "GGT",
+    "group": "biochemical",
+    "importance": 0.00892395717977119
+   },
+   {
+    "feature": "Urea",
+    "group": "biochemical",
+    "importance": 0.008874738525901356
+   },
+   {
+    "feature": "Total.Protein",
+    "group": "biochemical",
+    "importance": 0.006413805832410535
+   },
+   {
+    "feature": "Procalcitonin",
+    "group": "immunological",
+    "importance": 0.00600467577211771
+   },
+   {
+    "feature": "eGFR",
+    "group": "biochemical",
+    "importance": 0.005860095976375105
+   },
+   {
+    "feature": "Potassium",
+    "group": "biochemical",
+    "importance": 0.003340716131413875
+   }
+  ],
+  "seconds": 50
+ },
+ "death": {
+  "n": 2597,
+  "positives": 233,
+  "n_train": 1817,
+  "n_test": 780,
+  "test_positives": 70,
+  "best_config": {
+   "selector": "none",
+   "sampler": "none",
+   "model": "LightGBM"
+  },
+  "cv_auroc": 0.9552220640905068,
+  "cv_auprc": 0.7916987475956103,
+  "test": {
+   "All": {
+    "auroc": 0.9389134808853119,
+    "auprc": 0.7077558713519108
+   },
+   "Biochemical": {
+    "auroc": 0.8337625754527163,
+    "auprc": 0.45964382445375657
+   },
+   "Hematological": {
+    "auroc": 0.8258953722334005,
+    "auprc": 0.3583405700637947
+   },
+   "Immunological": {
+    "auroc": 0.7293158953722334,
+    "auprc": 0.37038649786214506
+   },
+   "Baseline LR": {
+    "auroc": 0.8560160965794769,
+    "auprc": 0.5704244650297
+   }
+  },
+  "test_ci": {
+   "All": {
+    "auroc": [
+     0.9127765614272548,
+     0.9640962944303461
+    ],
+    "auprc": [
+     0.5950477406438849,
+     0.8034191338355334
+    ]
+   },
+   "Biochemical": {
+    "auroc": [
+     0.7889979383720136,
+     0.8862176082616232
+    ],
+    "auprc": [
+     0.3407227510564931,
+     0.5685476474674467
+    ]
+   },
+   "Hematological": {
+    "auroc": [
+     0.7779889804573981,
+     0.8692572950875753
+    ],
+    "auprc": [
+     0.2579821524688262,
+     0.4649580334884421
+    ]
+   },
+   "Immunological": {
+    "auroc": [
+     0.660491505607419,
+     0.7854215252426505
+    ],
+    "auprc": [
+     0.2409491383832593,
+     0.4710881154743158
+    ]
+   },
+   "Baseline LR": {
+    "auroc": [
+     0.7920291981607769,
+     0.9040637151856341
+    ],
+    "auprc": [
+     0.44036697311270123,
+     0.67343013455675
+    ]
+   }
+  },
+  "paired_prob_all_better": {
+   "Biochemical": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   },
+   "Hematological": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   },
+   "Immunological": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   },
+   "Baseline LR": {
+    "auroc": 1.0,
+    "auprc": 1.0
+   }
+  },
+  "threshold": 0.019180071585536206,
+  "diagnostics": {
+   "missingness_mask_only_auroc": 0.9746478873239437,
+   "nan_aware_lightgbm_auroc": 0.9858752515090544
+  },
+  "sensitivity": 0.8,
+  "specificity": 0.9014084507042254,
+  "precision": 0.4444444444444444,
+  "tp": 56,
+  "fp": 70,
+  "fn": 14,
+  "tn": 640,
+  "top_features": [
+   {
+    "feature": "BASO",
+    "group": "hematological",
+    "importance": 0.02858484238765931
+   },
+   {
+    "feature": "eGFR",
+    "group": "biochemical",
+    "importance": 0.02062776659959762
+   },
+   {
+    "feature": "RDW",
+    "group": "hematological",
+    "importance": 0.020179745137491642
+   },
+   {
+    "feature": "Troponin",
+    "group": "immunological",
+    "importance": 0.015183098591549331
+   },
+   {
+    "feature": "Procalcitonin",
+    "group": "immunological",
+    "importance": 0.014080482897384342
+   },
+   {
+    "feature": "PLT",
+    "group": "hematological",
+    "importance": 0.013946344735077172
+   },
+   {
+    "feature": "Albumin",
+    "group": "biochemical",
+    "importance": 0.011102615694165048
+   },
+   {
+    "feature": "CRP",
+    "group": "immunological",
+    "importance": 0.01069885982562043
+   },
+   {
+    "feature": "Direct_bilirubin",
+    "group": "biochemical",
+    "importance": 0.008354124748490961
+   },
+   {
+    "feature": "Glucose",
+    "group": "biochemical",
+    "importance": 0.007793427230046983
+   }
+  ],
+  "seconds": 58
+ }
+}

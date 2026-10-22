@@ -1,0 +1,23 @@
+# Dataset files
+data/*.sav
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Trained model artifacts
+*.joblib
+
+# Preliminary quick-run outputs
+results_quick/
+models_quick/
+
+# Local environment files
+.env
+.env.*
+
+# OS and notebook checkpoints
+.DS_Store
+.ipynb_checkpoints/

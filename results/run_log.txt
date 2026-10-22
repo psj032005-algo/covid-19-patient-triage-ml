@@ -1,0 +1,80 @@
+
+=== ICU: n=2000 pos=279 (14.0%) feats=54
+train 1400 (pos 195) | test 600 (pos 84)
+  selector   sampler     model  cv_auroc  cv_auroc_sd  cv_auprc  cv_auprc_sd
+0      fpr      none  LightGBM     0.909        0.017     0.673        0.058
+1      fpr      none        RF     0.905        0.017     0.645        0.061
+2    lasso      none  LightGBM     0.893        0.019     0.609        0.065
+3     none      none  LightGBM     0.882        0.019     0.602        0.064
+4    lasso      none        RF     0.880        0.027     0.599        0.079
+5     none      none        RF     0.873        0.023     0.588        0.065
+6    lasso  smoteenn  LightGBM     0.872        0.023     0.537        0.099
+7      fpr  smoteenn  LightGBM     0.867        0.020     0.557        0.087
+BEST (by CV AUROC): ('fpr', 'none', 'LightGBM')
+diagnostics (leaky, NOT used for results): {'missingness_mask_only_auroc': 0.8716431339977853, 'nan_aware_lightgbm_auroc': 0.9546188630490956}
+{
+ "test": {
+  "All": {
+   "auroc": 0.9001476559616095,
+   "auprc": 0.639023712749873
+  },
+  "Biochemical": {
+   "auroc": 0.8812984496124031,
+   "auprc": 0.6255622581710493
+  },
+  "Hematological": {
+   "auroc": 0.5059754521963825,
+   "auprc": 0.14014835979817603
+  },
+  "Immunological": {
+   "auroc": 0.5507105943152456,
+   "auprc": 0.1577411267040731
+  },
+  "Baseline LR": {
+   "auroc": 0.8192137320044297,
+   "auprc": 0.5044173399124298
+  }
+ },
+ "sensitivity": 0.7857142857142857,
+ "specificity": 0.8313953488372093
+}
+
+=== DEATH: n=2597 pos=233 (9.0%) feats=37
+train 1817 (pos 163) | test 780 (pos 70)
+  selector   sampler     model  cv_auroc  cv_auroc_sd  cv_auprc  cv_auprc_sd
+0     none      none  LightGBM     0.955        0.005     0.792        0.025
+1      fpr      none  LightGBM     0.954        0.006     0.780        0.018
+2    lasso  smoteenn  LightGBM     0.950        0.008     0.756        0.038
+3      fpr  smoteenn  LightGBM     0.949        0.009     0.744        0.045
+4    lasso      none  LightGBM     0.948        0.007     0.772        0.036
+5     none  smoteenn  LightGBM     0.948        0.008     0.744        0.048
+6     none  smoteenn        RF     0.935        0.020     0.672        0.075
+7      fpr  smoteenn        RF     0.932        0.017     0.659        0.078
+BEST (by CV AUROC): ('none', 'none', 'LightGBM')
+diagnostics (leaky, NOT used for results): {'missingness_mask_only_auroc': 0.9746478873239437, 'nan_aware_lightgbm_auroc': 0.9858752515090544}
+{
+ "test": {
+  "All": {
+   "auroc": 0.9389134808853119,
+   "auprc": 0.7077558713519108
+  },
+  "Biochemical": {
+   "auroc": 0.8337625754527163,
+   "auprc": 0.45964382445375657
+  },
+  "Hematological": {
+   "auroc": 0.8258953722334005,
+   "auprc": 0.3583405700637947
+  },
+  "Immunological": {
+   "auroc": 0.7293158953722334,
+   "auprc": 0.37038649786214506
+  },
+  "Baseline LR": {
+   "auroc": 0.8560160965794769,
+   "auprc": 0.5704244650297
+  }
+ },
+ "sensitivity": 0.8,
+ "specificity": 0.9014084507042254
+}
