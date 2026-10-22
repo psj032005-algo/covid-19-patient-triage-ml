@@ -52,6 +52,8 @@ classification metrics.
 These values are transcribed from the existing `results/summary.json`.
 They are preliminary, not validated final performance estimates.
 
+A separate quick run produced slightly different preliminary results; its outputs are stored under results_quick/ and are not substituted for the saved full-run results in this document.
+
 ## 4. Threshold-based test metrics
 
 | Task | Sensitivity | Specificity | Precision |
