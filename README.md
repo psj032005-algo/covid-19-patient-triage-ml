@@ -49,6 +49,7 @@ Death: variant D (ratios + tuned LightGBM x 5 imputations) is final - test AUROC
 * Even so, the missing-value pattern alone gives AUROC 0.87 (ICU) / 0.97 (death), so absolute performance is probably optimistic.
   The hematological block (no repeated rows) is the least-affected estimate.
 
+
 ## Layout
 ```
 src/data.py          load/align/clean the .sav files
